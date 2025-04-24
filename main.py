@@ -7,7 +7,7 @@ from telegram.ext import (
     ApplicationBuilder, CommandHandler, MessageHandler, ContextTypes, filters
 )
 
-BOT_TOKEN = os.getenv("BOT_TOKEN", "YOUR_BOT_TOKEN_HERE")
+BOT_TOKEN = os.getenv("BOT_TOKEN", "7316868526:AAFfx9_6ocBz7U8VkRMGz_sczz09nbmxiPE")
 logging.basicConfig(level=logging.INFO)
 
 UPLOAD_DIR = "user_uploads"
