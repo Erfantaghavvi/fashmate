@@ -47,14 +47,14 @@ async def handle_image(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 def run_ladi_vton(person_path, cloth_path):
     # پوشه تمیز
-    shutil.copy(person_path, "ladi-vton/assets/image/person.jpg")
-    shutil.copy(cloth_path, "ladi-vton/assets/cloth/cloth.jpg")
+    shutil.copy(person_path, "assets/image/person.jpg")
+    shutil.copy(cloth_path, "assets/cloth/cloth.jpg")
 
     # اجرای اسکریپت مدل
     os.system("python ladi-vton/inference.py")
 
     # فایل خروجی معمولاً در مسیر ladi-vton/output/ قرار می‌گیرد
-    shutil.copy("ladi-vton/output/try-on.jpg", OUTPUT_PATH)
+    shutil.copy("output/try-on.jpg", OUTPUT_PATH)
 
 if __name__ == "__main__":
     app = ApplicationBuilder().token(BOT_TOKEN).build()
