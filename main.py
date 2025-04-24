@@ -66,8 +66,9 @@ def run_ladi_vton(person_path: str, cloth_path: str):
     shutil.copy(person_path, "assets/image/person.jpg")
     shutil.copy(cloth_path, "assets/cloth/cloth.jpg")
 
+
     # اجرای مدل LaDI-VTON
-    exit_code = os.system("python ladi-vton/inference.py")
+    exit_code = os.system("python inference.py")
     if exit_code != 0:
         raise RuntimeError("اجرای اسکریپت مدل با خطا مواجه شد.")
 
